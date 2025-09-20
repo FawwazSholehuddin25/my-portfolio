@@ -1,0 +1,108 @@
+/* About */
+.about {
+  padding: 90px 20px;   /* atas-bawah lebih lega */
+  background-color: #141229;
+  color: #fff;
+  text-align: center;
+  scroll-margin-top: 120px; /* biar gak ketiban navbar */
+}
+
+
+/* Title */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.section-subtitle {
+  font-size: 15px;
+  color: #aaa;
+  margin-bottom: 40px;
+  display: block;
+}
+
+/* Container: foto kiri, teks kanan */
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;   /* <-- ini bikin foto sejajar tengah sama teks */
+  justify-content: center;
+  gap: 150px;
+  flex-wrap: wrap;
+}
+
+
+/* Konten teks */
+.about-content {
+  max-width: 550px;
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 15px;
+  color: #ddd;
+}
+
+/* Foto */
+.about-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* biar foto sejajar atas */
+}
+
+.about-img {
+  width: 220px;
+  height: 250px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Tombol CV */
+.cv-button {
+  margin-top: 25px;
+  padding: 12px 24px;
+  background: #a78bfa; /* sama seperti Contact Me */
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.cv-button:hover {
+  background: #7c3aed;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  /* Foto */
+.about-img {
+  width: 200px;   /* lebih kecil dari 220px */
+  height: 270px;  /* lebih kecil dari 280px */
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  margin-top: 10px; /* kasih sedikit turun biar sejajar */
+}
+
+/* Konten teks */
+.about-content {
+  max-width: 550px;
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 15px;
+  color: #ddd;
+  margin-top: -10px; /* geser teks naik */
+}
+
+}

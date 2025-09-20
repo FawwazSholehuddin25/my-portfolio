@@ -1,0 +1,20 @@
+/* Experience.css */
+.experience {
+  background: #fff;
+}
+.exp-card {
+  background: #f4f4f9;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 700px;
+  text-align: left;
+}
+.exp-card h3 {
+  margin: 0;
+  color: #333;
+}
+.exp-card p {
+  margin: 0.2rem 0 0.5rem 0;
+  font-style: italic;
+}

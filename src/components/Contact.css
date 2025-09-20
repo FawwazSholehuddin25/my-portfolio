@@ -1,0 +1,140 @@
+/* Contact */
+.contact {
+  padding: 30px 20px 80px; /* bawah agak lebih kecil */
+  background-color: #141229;
+  color: #fff;
+  text-align: center;
+  scroll-margin-top: 120px;
+}
+
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.section-subtitle {
+  font-size: 15px;
+  color: #aaa;
+  margin-bottom: 40px;
+  display: block;
+}
+
+/* Container untuk kiri & kanan */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Info box kiri */
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #1e1b3a;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+.info-box:hover {
+  transform: translateY(-4px);
+}
+
+.info-box .icon {
+  font-size: 1.5rem;
+  color: #8b5cf6;
+}
+
+.info-box h4 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.info-box p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Form kanan */
+.contact-form {
+  flex: 1;
+  background: #1e1b3a;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form .form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  outline: none;
+  background: #252048;
+  color: #fff;
+  font-size: 0.95rem;
+  resize: none;
+  transition: border 0.3s, box-shadow 0.3s;
+  margin-bottom: 15px; /* 🔥 kasih jarak bawah */
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #8b5cf6;
+}
+
+.contact-form textarea {
+  margin-bottom: 15px;
+}
+
+.btn-send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #8b5cf6;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+  width: 100%;
+}
+
+.btn-send:hover {
+  background: #7c3aed;
+  transform: scale(1.05);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,107 @@
+/* Projects */
+.projects {
+  padding: 01px 20px;   /* kasih jarak lebih */
+  background-color: #141229;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  scroll-margin-top: 120px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.section-subtitle {
+  font-size: 15px;
+  color: #aaa;
+  margin-bottom: 40px;
+  display: block;
+}
+
+.projects-slider {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.projects-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.project-slide {
+  flex: 0 0 100%;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.project-media {
+  width: 100%;
+  max-width: 500px;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+.project-slide h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-slide p {
+  font-size: 15px;
+  color: #ddd;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Tombol kiri-kanan */
+.nav-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(155, 89, 182, 0.9);
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+.nav-btn:hover {
+  background: rgba(142, 68, 173, 1);
+}
+
+/* 🔥 Dots Indicator */
+.projects-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: -13px;
+  gap: 8px;
+  position: relative;
+}
+

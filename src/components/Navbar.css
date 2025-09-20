@@ -1,0 +1,43 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(11, 11, 44, 0.7); /* transparan */
+  backdrop-filter: blur(10px);       /* efek blur kaca */
+  -webkit-backdrop-filter: blur(10px); /* support Safari */
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #e5e7eb;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #8b5cf6; /* hover ungu */
+}
+
+.nav-links li .active {
+  color: #6366f1; /* biru highlight */
+  border-bottom: 2px solid #6366f1;
+  padding-bottom: 3px;
+}

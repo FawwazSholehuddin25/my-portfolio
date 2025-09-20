@@ -1,0 +1,51 @@
+/* ===== FOOTER ===== */
+.footer {
+  background: #0b0b20;
+  color: white;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.footer-left p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #a78bfa;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-socials a {
+  color: #a78bfa;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: white;
+}
