@@ -35,7 +35,14 @@ function About() {
             dashboard development to solve real-world problems.
           </p>
 
-          <a href="/cv-fawwaz.pdf" download className="cv-button">
+          {/* Gunakan nama file yang sama dengan yang di folder public */}
+          <a 
+            href={process.env.PUBLIC_URL + "/cv-fawwaz.pdf"} 
+            download="CV_Fawwaz_Sholehuddin.pdf" 
+            className="cv-button"
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             <FaDownload /> Download CV
           </a>
         </div>

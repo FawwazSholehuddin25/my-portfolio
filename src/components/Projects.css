@@ -1,23 +1,31 @@
-/* Projects */
+/* Projects Section */
 .projects {
-  padding: 01px 20px;   /* kasih jarak lebih */
+  /* Paksa padding atas ke nilai sangat kecil agar judul naik */
+  padding: 10px 20px 40px !important; 
   background-color: #141229;
   color: #fff;
   text-align: center;
   overflow: hidden;
-  scroll-margin-top: 120px;
+  /* Sesuaikan jarak berhenti saat klik navbar */
+  scroll-margin-top: 70px !important; 
+  position: relative;
+  /* Hilangkan margin/height tambahan yang bikin melorot */
+  margin: 0 !important;
+  min-height: auto !important; 
 }
 
 .section-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 6px;
+  /* Hilangkan margin atas bawaan tag h2 */
+  margin-top: 0 !important; 
+  margin-bottom: 2px;
 }
 
 .section-subtitle {
-  font-size: 15px;
+  font-size: 14px;
   color: #aaa;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   display: block;
 }
 
@@ -30,13 +38,13 @@
 
 .projects-track {
   display: flex;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-slide {
   flex: 0 0 100%;
   text-align: center;
-  padding: 10px;
+  padding: 0 10px;
   box-sizing: border-box;
 }
 
@@ -44,7 +52,7 @@
   width: 100%;
   max-width: 500px;
   max-height: 280px;
-  object-fit: cover;
+  object-fit: contain; /* Agar dashboard fawwaz7.jpeg terlihat utuh */
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   margin-bottom: 20px;
@@ -64,7 +72,7 @@
   margin: 0 auto;
 }
 
-/* Tombol kiri-kanan */
+/* Navigasi Buttons - Ungu Terang */
 .nav-btn {
   position: absolute;
   top: 40%;
@@ -80,28 +88,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
   z-index: 10;
 }
 
-.left-btn {
-  left: 10px;
-}
+.left-btn { left: 10px; }
+.right-btn { right: 10px; }
 
-.right-btn {
-  right: 10px;
-}
-
-.nav-btn:hover {
-  background: rgba(142, 68, 173, 1);
-}
-
-/* 🔥 Dots Indicator */
+/* Dots Indicator */
 .projects-dots {
   display: flex;
   justify-content: center;
-  margin-top: -13px;
+  margin-top: 15px;
   gap: 8px;
-  position: relative;
 }
 
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #9b59b2;
+}

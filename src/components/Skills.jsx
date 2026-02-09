@@ -1,4 +1,3 @@
-// src/components/Skills.jsx
 import React from "react";
 import "./Skills.css";
 
@@ -43,7 +42,6 @@ function Skills() {
     { name: "Google Colab", icon: GoogleColab },
     { name: "GitHub", icon: Github },
     { name: "Visual Studio Code", icon: VSCode },
-    // QGIS dari public (tanpa import)
     { name: "QGIS", icon: "/icons/qgis.svg" },
     { name: "Blender", icon: Blender },
     { name: "Canva", icon: Canva },

@@ -7,19 +7,26 @@ import fawwaz3 from "../assets/fawwaz3.jpeg";
 import fawwaz4 from "../assets/fawwaz4.jpeg";
 import fawwaz6 from "../assets/fawwaz6.jpeg";
 import fawwaz5video from "../assets/fawwaz5.mp4";
+import fawwaz7 from "../assets/fawwaz7.jpeg";
 
 const projects = [
   {
     type: "image",
-    img: fawwaz1,
-    title: "LAN Network Design with RIPV2 – Vocational Project",
-    desc: "Built a LAN using Cisco Packet Tracer with RIPV2 routing protocol to simulate data communication between subnets."
+    img: fawwaz7,
+    title: "Climate & Rice Production Analysis – IBM Granite AI",
+    desc: "AI-powered analysis using IBM Granite to predict how climate variables impact rice production in Indonesia, supporting food security insights."
   },
   {
     type: "image",
-    img: fawwaz2,
-    title: "Bike Shop Website – College Project",
-    desc: "Designed an e-commerce website prototype for a bike shop using Figma with focus on user-friendly interface."
+    img: fawwaz6,
+    title: "Data Mining for Criminal Case Analysis – Personal Project",
+    desc: "Applied C4.5 decision tree in Google Colab to analyze criminal law cases involving violence against women."
+  },
+  {
+    type: "image",
+    img: fawwaz4,
+    title: "Hospital Patient Data App – College Project",
+    desc: "Developed an Android Studio mobile app to manage patient records with CRUD operations and DB integration."
   },
   {
     type: "image",
@@ -29,23 +36,24 @@ const projects = [
   },
   {
     type: "image",
-    img: fawwaz4,
-    title: "Hospital Patient Data App – College Project",
-    desc: "Developed an Android Studio mobile app to manage patient records with CRUD operations and DB integration."
+    img: fawwaz2,
+    title: "Bike Shop Website – College Project",
+    desc: "Designed an e-commerce website prototype for a bike shop using Figma with focus on user-friendly interface."
+  },
+  {
+    type: "image",
+    img: fawwaz1,
+    title: "LAN Network Design with RIPV2 – Vocational Project",
+    desc: "Built a LAN using Cisco Packet Tracer with RIPV2 routing protocol to simulate data communication between subnets."
   },
   {
     type: "video",
     video: fawwaz5video,
     title: "Flag & Object Animation – Team College Project",
     desc: "Created a 3D animation in Blender, including a flag simulation and creative object animation themed 'Roti Bermadu'."
-  },
-  {
-    type: "image",
-    img: fawwaz6,
-    title: "Data Mining for Criminal Case Analysis – Personal Project",
-    desc: "Applied C4.5 decision tree in Google Colab to analyze criminal law cases involving violence against women."
   }
 ];
+
 
 function Projects() {
   const [current, setCurrent] = useState(0);
