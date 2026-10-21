@@ -1,67 +1,84 @@
-/* About */
+/* About Section */
 .about {
-  padding: 90px 20px;   /* atas-bawah lebih lega */
-  background-color: #141229;
+  padding: 80px 20px;
+  background-color: transparent;
   color: #fff;
   text-align: center;
-  scroll-margin-top: 120px; /* biar gak ketiban navbar */
+  scroll-margin-top: 100px;
 }
-
 
 /* Title */
 .section-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 6px;
+  color: #ffffff;
 }
 
 .section-subtitle {
   font-size: 15px;
-  color: #aaa;
+  color: #94a3b8;
   margin-bottom: 40px;
   display: block;
 }
 
-/* Container: foto kiri, teks kanan */
+/* Container utama */
 .about-container {
   display: flex;
   flex-direction: row;
-  align-items: center;   /* <-- ini bikin foto sejajar tengah sama teks */
-  justify-content: center;
-  gap: 150px;
-  flex-wrap: wrap;
+  align-items: flex-start; /* Mengunci sejajar atas */
+  justify-content: space-between;
+  max-width: 1050px;
+  margin: 0 auto;
+  gap: 40px;
 }
 
-
-/* Konten teks */
-.about-content {
-  max-width: 550px;
-  text-align: justify;
-  line-height: 1.7;
-  font-size: 15px;
-  color: #ddd;
-}
-
-/* Foto */
+/* Pembungkus Bingkai Foto: Ditarik ke atas pakai margin-top negatif */
 .about-img-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: flex-start; /* biar foto sejajar atas */
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-shrink: 0;
+  margin-top: -30px; /* Bikin seluruh bingkai kotak naik tepat ke area kotak merah */
 }
 
+/* Bingkai Foto */
 .about-img {
-  width: 220px;
-  height: 250px;
-  border-radius: 14px;
+  width: 250px;
+  height: 300px;
+  border-radius: 16px;
   object-fit: cover;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Konten Teks Kanan */
+.about-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.about-text, .about-content p {
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #cbd5e1;
+  margin-bottom: 16px;
+}
+
+.about-content strong {
+  color: #0ea5e9;
+  font-weight: 600;
 }
 
 /* Tombol CV */
 .cv-button {
-  margin-top: 25px;
-  padding: 12px 24px;
-  background: #a78bfa; /* sama seperti Contact Me */
+  align-self: flex-start;
+  margin-top: 10px;
+  padding: 12px 26px;
+  background-color: #0ea5e9;
   color: #fff;
   border-radius: 8px;
   font-weight: 600;
@@ -69,40 +86,40 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   text-decoration: none;
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
 }
 
 .cv-button:hover {
-  background: #7c3aed;
+  background-color: #0284c7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.45);
 }
 
-/* Responsif */
+/* Responsif Layar HP */
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
     text-align: center;
+    align-items: center;
     gap: 30px;
   }
 
-  /* Foto */
-.about-img {
-  width: 200px;   /* lebih kecil dari 220px */
-  height: 270px;  /* lebih kecil dari 280px */
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  margin-top: 10px; /* kasih sedikit turun biar sejajar */
-}
+  .about-img-wrapper {
+    margin-top: 0; /* Reset margin di layar HP */
+  }
 
-/* Konten teks */
-.about-content {
-  max-width: 550px;
-  text-align: justify;
-  line-height: 1.7;
-  font-size: 15px;
-  color: #ddd;
-  margin-top: -10px; /* geser teks naik */
-}
+  .about-content p {
+    text-align: center;
+  }
 
+  .cv-button {
+    align-self: center;
+  }
+
+  .about-img {
+    width: 210px;
+    height: 260px;
+  }
 }

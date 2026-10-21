@@ -1,115 +1,112 @@
+/* Layout Utama Hero Section */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #141229; /* lebih muda */
-  padding: 0 10%;
+  min-height: 90vh; /* Bikin area Hero lebih tinggi biar pas di tengah viewport */
+  padding: 80px 10% 40px 10%; /* Tambah padding-top jadi 80px biar konten terdorong turun */
   position: relative;
+  background-color: transparent;
 }
 
-/* Sidebar Sosmed */
-.socials-sidebar {
-  position: fixed;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.socials-sidebar a {
-  color: #a78bfa;
-  font-size: 1.5rem;
-  transition: color 0.3s;
-}
-
-.socials-sidebar a:hover {
-  color: #fff;
-}
-
-/* Container */
 .hero-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 950px;
+  gap: 50px;
+  margin-top: 20px; /* Tambahan margin top untuk mendorong semua konten turun */
 }
 
-/* Text */
+/* Teks & Tampilan */
 .hero-text {
-  flex: 1;
+  max-width: 600px;
 }
 
 .hero-text h1 {
   font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
   color: #ffffff;
-  white-space: nowrap; /* biar gak kebawah */
 }
 
 .subtitle {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #ffffff;
-  white-space: nowrap; /* biar tetap sejajar */
-}
-
-.highlight {
-  color: #1e3a8a; /* biru dongker */
-  display: inline;
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: #cbd5e1;
 }
 
 .hero-desc {
   font-size: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 25px;
   line-height: 1.6;
-  max-width: 600px;
-  text-align: justify;
-  color: #cbd5e1;
+  color: #94a3b8;
 }
 
-/* Button */
+/* Tombol Contact Me */
 .btn {
   display: inline-flex;
   align-items: center;
-  background: #a78bfa;
-  color: #fff;
-  padding: 10px 20px;
+  padding: 12px 28px;
+  background-color: #0ea5e9;
+  color: #ffffff;
+  font-weight: 600;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+  border: none;
 }
 
 .btn:hover {
-  background: #7c3aed;
+  background-color: #0284c7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.45);
 }
 
-/* Image */
+/* Bingkai Oval Vertikal */
 .hero-img {
-  flex: 1;
+  width: 240px;
+  height: 320px;
+  border-radius: 120px;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(14, 165, 233, 0.15);
+  margin-right: 20px;
+  flex-shrink: 0;
 }
 
+/* Foto Dalam Bingkai Oval */
 .hero-img img {
-  width: 280px;
-  height: 280px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #a78bfa;
-  box-shadow: 0 0 30px rgba(167, 139, 250, 0.7);
+  object-position: center 15%;
+  border-radius: 120px;
 }
-.hero-text h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #d1d5db; /* abu-abu terang */
-  white-space: nowrap;
+
+/* Sidebar Social Media */
+.socials-sidebar {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10;
+}
+
+.socials-sidebar a {
+  font-size: 1.5rem;
+  color: #94a3b8;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.socials-sidebar a:hover {
+  color: #0ea5e9;
+  transform: translateX(3px);
 }

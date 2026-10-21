@@ -1,8 +1,8 @@
+/* ===== CERTIFICATES SECTION (FROSTED GLASS THEME) ===== */
 .cert-section {
-  /* Sesuaikan padding atas agar sejajar dengan Projects */
   padding: 40px 20px 60px !important; 
-  background-color: #141229;
-  color: #fff;
+  background: transparent !important;
+  color: #ffffff;
   text-align: center;
   overflow: hidden;
   scroll-margin-top: 70px;
@@ -13,11 +13,12 @@
   font-weight: 700;
   margin-top: 0 !important;
   margin-bottom: 5px;
+  color: #ffffff;
 }
 
 .cert-subtitle-main {
   font-size: 14px;
-  color: #aaa;
+  color: #94a3b8; /* Cyan slate netral */
   margin-bottom: 30px;
   display: block;
 }
@@ -43,16 +44,26 @@
   align-items: center;
 }
 
+/* Kartu Kaca (Frosted-Glass Box) */
 .cert-img-box {
   width: 100%;
   max-width: 500px;
   margin: 0 auto 15px;
   background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
-  padding: 10px;
-  border: 1px solid rgba(155, 89, 182, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.cert-img-box:hover {
+  border-color: rgba(14, 165, 233, 0.4); /* Akses biru saat dipijak */
+  box-shadow: 0 12px 30px rgba(14, 165, 233, 0.15);
 }
 
 .cert-img-content {
@@ -60,41 +71,52 @@
   height: auto;
   max-height: 280px;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .cert-item-title {
   font-size: 1.15rem;
   font-weight: 600;
-  color: #fff;
+  color: #38bdf8; /* Biru terang cerah */
   margin-top: 10px;
 }
 
+/* Tombol Navigasi Panah */
 .cert-btn-nav {
   position: absolute;
   top: 45%;
   transform: translateY(-50%);
-  background: rgba(155, 89, 182, 0.9);
-  border: none;
-  font-size: 1.8rem;
-  color: #fff;
+  background: rgba(14, 165, 233, 0.2); /* Transparan biru cyan */
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  backdrop-filter: blur(5px);
+  font-size: 1.5rem;
+  color: #38bdf8;
   cursor: pointer;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
+  transition: all 0.3s ease;
 }
 
-.cert-btn-left { left: 0; }
-.cert-btn-right { right: 0; }
+.cert-btn-nav:hover {
+  background: #0ea5e9;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+  transform: translateY(-50%) scale(1.05);
+}
 
+.cert-btn-left { left: 5px; }
+.cert-btn-right { right: 5px; }
+
+/* Indikator Titik (Dots) */
 .cert-dots-container {
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 20px;
   gap: 8px;
 }
 
@@ -104,8 +126,12 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .cert-dot-single.active {
-  background: #9b59b2;
+  background: #0ea5e9; /* Biru aktif */
+  width: 24px; /* Efek kapsul lebar untuk titik aktif */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.6);
 }

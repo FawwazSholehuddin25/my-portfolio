@@ -1,59 +1,37 @@
 import React, { useState } from "react";
 import "./Projects.css";
 
-import fawwaz1 from "../assets/fawwaz1.jpeg";
-import fawwaz2 from "../assets/fawwaz2.jpeg";
-import fawwaz3 from "../assets/fawwaz3.jpeg";
-import fawwaz4 from "../assets/fawwaz4.jpeg";
 import fawwaz6 from "../assets/fawwaz6.jpeg";
-import fawwaz5video from "../assets/fawwaz5.mp4";
 import fawwaz7 from "../assets/fawwaz7.jpeg";
+import fawwaz9 from "../assets/fawwaz9.jpeg";
+import fawwaz10video from "../assets/fawwaz10.mp4";
 
 const projects = [
   {
     type: "image",
     img: fawwaz7,
-    title: "Climate & Rice Production Analysis – IBM Granite AI",
-    desc: "AI-powered analysis using IBM Granite to predict how climate variables impact rice production in Indonesia, supporting food security insights."
+    title: "Analisis Iklim & Produksi Padi – IBM Granite AI",
+    desc: "Analisis berbasis AI menggunakan IBM Granite untuk memprediksi dampak variabel iklim terhadap produksi padi di Indonesia guna mendukung wawasan ketahanan pangan."
+  },
+  {
+    type: "image",
+    img: fawwaz9,
+    title: "Sistem Rekomendasi Film Hybrid NCF",
+    desc: "Membangun model Hybrid Neural Collaborative Filtering menggunakan Keras Tuner & 5-Fold Cross Validation pada 62.000+ data rating untuk menghasilkan 10 rekomendasi film teratas."
   },
   {
     type: "image",
     img: fawwaz6,
-    title: "Data Mining for Criminal Case Analysis – Personal Project",
-    desc: "Applied C4.5 decision tree in Google Colab to analyze criminal law cases involving violence against women."
-  },
-  {
-    type: "image",
-    img: fawwaz4,
-    title: "Hospital Patient Data App – College Project",
-    desc: "Developed an Android Studio mobile app to manage patient records with CRUD operations and DB integration."
-  },
-  {
-    type: "image",
-    img: fawwaz3,
-    title: "Cultural Bridge Website – Team College Project",
-    desc: "Created a website prototype with the theme 'Membangun Jembatan Budaya' to promote Indonesian local music."
-  },
-  {
-    type: "image",
-    img: fawwaz2,
-    title: "Bike Shop Website – College Project",
-    desc: "Designed an e-commerce website prototype for a bike shop using Figma with focus on user-friendly interface."
-  },
-  {
-    type: "image",
-    img: fawwaz1,
-    title: "LAN Network Design with RIPV2 – Vocational Project",
-    desc: "Built a LAN using Cisco Packet Tracer with RIPV2 routing protocol to simulate data communication between subnets."
+    title: "Data Mining Analisis Kasus Pidana",
+    desc: "Menerapkan algoritma pohon keputusan C4.5 di Google Colab untuk menganalisis pola dan mengekstrak informasi dari kasus hukum pidana kekerasan terhadap perempuan."
   },
   {
     type: "video",
-    video: fawwaz5video,
-    title: "Flag & Object Animation – Team College Project",
-    desc: "Created a 3D animation in Blender, including a flag simulation and creative object animation themed 'Roti Bermadu'."
+    video: fawwaz10video,
+    title: "Sistem Deteksi Pelanggaran Helm Otomatis – YOLO11",
+    desc: "Mengembangkan model Computer Vision end-to-end menggunakan Ultralytics YOLO11 pada GPU Tesla T4. Mampu mengklasifikasikan 4 objek lalu lintas dengan mAP50 84.7% dan akurasi 99.5% dalam mendeteksi pelanggaran pengendara tanpa helm."
   }
 ];
-
 
 function Projects() {
   const [current, setCurrent] = useState(0);
@@ -86,6 +64,7 @@ function Projects() {
                   autoPlay
                   loop
                   muted
+                  playsInline
                   className="project-media"
                 />
               )}
@@ -95,14 +74,14 @@ function Projects() {
           ))}
         </div>
 
-        <button onClick={prevProject} className="nav-btn left-btn">
+        <button onClick={prevProject} className="nav-btn left-btn" aria-label="Previous Project">
           &#8249;
         </button>
-        <button onClick={nextProject} className="nav-btn right-btn">
+        <button onClick={nextProject} className="nav-btn right-btn" aria-label="Next Project">
           &#8250;
         </button>
 
-        {/* 🔥 Dots indicator */}
+        {/* Dots indicator */}
         <div className="projects-dots">
           {projects.map((_, index) => (
             <span

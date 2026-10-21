@@ -1,4 +1,3 @@
-// src/components/Contact.jsx
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
 import "./Contact.css";
@@ -6,16 +5,16 @@ import "./Contact.css";
 function Contact() {
   return (
     <section id="contact" className="contact">
-      <h2 className="section-title">Contact Me</h2>
-      <p className="section-subtitle">Get in touch</p>
+      <h2 className="section-title">Contact</h2>
+      <span className="section-subtitle">Let's Get In Touch</span>
 
       <div className="contact-container">
-        {/* Left side - info */}
+        {/* Sisi Kiri - Info Kontak */}
         <div className="contact-info">
           <div className="info-box">
             <FaPhoneAlt className="icon" />
             <div>
-              <h4>Call Me</h4>
+              <h4>Telepon / WhatsApp</h4>
               <p>+62 821 2393 7272</p>
             </div>
           </div>
@@ -29,22 +28,22 @@ function Contact() {
           <div className="info-box">
             <FaMapMarkerAlt className="icon" />
             <div>
-              <h4>Location</h4>
+              <h4>Lokasi</h4>
               <p>Jakarta Barat, Indonesia</p>
             </div>
           </div>
         </div>
 
-        {/* Right side - form */}
-        <form className="contact-form">
+        {/* Sisi Kanan - Form Pesan */}
+        <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
           <div className="form-row">
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email" required />
+            <input type="text" placeholder="Nama Lengkap" required />
+            <input type="email" placeholder="Email Anda" required />
           </div>
-          <input type="text" placeholder="Subject" required />
-          <textarea placeholder="Message" rows="5" required></textarea>
+          <input type="text" placeholder="Subjek Pesan" required />
+          <textarea placeholder="Tuliskan pesan Anda di sini..." rows="5" required></textarea>
           <button type="submit" className="btn-send">
-            <FaPaperPlane /> Send Message
+            <FaPaperPlane style={{ marginRight: "8px" }} /> Kirim Pesan
           </button>
         </form>
       </div>

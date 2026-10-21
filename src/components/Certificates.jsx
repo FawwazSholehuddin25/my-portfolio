@@ -1,25 +1,39 @@
 import React, { useState } from "react";
 import "./Certificates.css";
 
-// Import assets (tetap seperti semula)
+// Import assets
+import courseraGoogleData from "../assets/certificates/Coursera-Foundations Data, Data, Everywhere.jpg";
 import udemyPandas from "../assets/certificates/udemy-python-data-analysis.jpg";
 import ibmGranite from "../assets/certificates/ibm-granite.jpg";
-import hrPython from "../assets/certificates/hackerrank-python.jpg";
 import hrSql from "../assets/certificates/hackerrank-sql.jpg";
-import hrJava from "../assets/certificates/hackerrank-java.jpg";
+import hrPython from "../assets/certificates/hackerrank-python.jpg";
 import sololearnViz from "../assets/certificates/sololearn-visualize-data.jpg";
-import ciscoCcnAv7 from "../assets/certificates/cisco-ccnav7.jpg";
-import ciscoItEssentials from "../assets/certificates/cisco-it-essentials.jpg";
 
 const certificates = [
-  { img: udemyPandas, title: "Python Data Analysis Bootcamp - Pandas, Seaborn and Plotly" },
-  { img: ibmGranite, title: "Data Classification and Summarization Using IBM Granite" },
-  { img: hrPython, title: "Python (Basic) – HackerRank" },
-  { img: hrSql, title: "SQL (Basic) – HackerRank" },
-  { img: hrJava, title: "Java (Basic) – HackerRank" },
-  { img: sololearnViz, title: "Visualize Your Data – SoloLearn" },
-  { img: ciscoCcnAv7, title: "CCNAv7: Introduction to Networks" },
-  { img: ciscoItEssentials, title: "IT Essentials: PC Hardware and Software" },
+  { 
+    img: courseraGoogleData, 
+    title: "Foundations: Data, Data, Everywhere – Google (Coursera)" 
+  },
+  { 
+    img: udemyPandas, 
+    title: "Python Data Analysis Bootcamp - Pandas, Seaborn and Plotly – Udemy" 
+  },
+  { 
+    img: ibmGranite, 
+    title: "Data Classification and Summarization Using IBM Granite – IBM" 
+  },
+  { 
+    img: hrSql, 
+    title: "SQL (Basic) – HackerRank" 
+  },
+  { 
+    img: hrPython, 
+    title: "Python (Basic) – HackerRank" 
+  },
+  { 
+    img: sololearnViz, 
+    title: "Visualize Your Data – SoloLearn" 
+  }
 ];
 
 function Certificates() {
@@ -31,7 +45,7 @@ function Certificates() {
   return (
     <section id="certificates" className="cert-section">
       <h2 className="cert-title-main">Certificates</h2>
-      <span className="cert-subtitle-main">Credentials & Achievements</span>
+      <span className="cert-subtitle-main">Credentials & Professional Certifications</span>
 
       <div className="cert-slider-wrapper">
         <div 
@@ -52,11 +66,11 @@ function Certificates() {
           ))}
         </div>
 
-        {/* Navigation Buttons dengan nama unik */}
-        <button onClick={prev} className="cert-btn-nav cert-btn-left">&#8249;</button>
-        <button onClick={next} className="cert-btn-nav cert-btn-right">&#8250;</button>
+        {/* Navigation Buttons */}
+        <button onClick={prev} className="cert-btn-nav cert-btn-left" aria-label="Previous Certificate">&#8249;</button>
+        <button onClick={next} className="cert-btn-nav cert-btn-right" aria-label="Next Certificate">&#8250;</button>
 
-        {/* Dots dengan nama unik */}
+        {/* Dots */}
         <div className="cert-dots-container">
           {certificates.map((_, index) => (
             <span

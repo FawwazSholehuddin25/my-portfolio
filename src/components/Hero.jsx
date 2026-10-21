@@ -1,9 +1,8 @@
-// src/components/Hero.jsx
 import React from "react";
 import { ReactTyped } from "react-typed";
 import { FaLinkedin, FaGithub, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import "./Hero.css";
-import fawwazImg from "../assets/fawwazimg.jpeg"; // pastikan path gambar benar
+import fawwazImg from "../assets/fawwazimg.jpeg";
 
 function Hero() {
   return (
@@ -26,7 +25,7 @@ function Hero() {
         <div className="hero-text">
           <h1>
             <ReactTyped
-              strings={["Hello, I'm Fawwaz Sholehuddin"]}
+              strings={["Halo, Saya Fawwaz Sholehuddin"]}
               typeSpeed={50}
               backSpeed={30}
               loop
@@ -34,17 +33,18 @@ function Hero() {
           </h1>
 
           <h2 className="subtitle">
-            Informatics Engineering Student &{" "}
-            <span className="highlight">Data Enthusiast</span>
+            Lulusan Teknik Informatika |{" "}
+            <span className="highlight" style={{ color: "#0EA5E9", fontWeight: "bold" }}>
+              Data Analyst & Data Scientist
+            </span>
           </h2>
 
           <p className="hero-desc">
-            Undergraduate student at Mercu Buana University, passionate about Data Science and
-            Artificial Intelligence. Always eager to learn and collaborate on impactful projects.
+            Lulusan Teknik Informatika Mercu Buana (IPK 3.78) dengan pengalaman mengolah data, membangun dashboard interaktif, dan mengembangkan model machine learning untuk membantu tim mengambil keputusan berbasis data.
           </p>
 
           <a href="#contact" className="btn">
-            <FaEnvelope style={{ marginRight: "8px" }} /> Contact Me
+            <FaEnvelope style={{ marginRight: "8px" }} /> Hubungi Saya
           </a>
         </div>
 

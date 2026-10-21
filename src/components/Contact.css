@@ -1,140 +1,148 @@
-/* Contact */
+/* Contact Section */
 .contact {
-  padding: 30px 20px 80px; /* bawah agak lebih kecil */
-  background-color: #141229;
+  padding: 40px 20px 80px !important;
+  background-color: transparent !important;
   color: #fff;
   text-align: center;
-  scroll-margin-top: 120px;
+  scroll-margin-top: 100px !important;
 }
 
-
 .section-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 6px;
+  color: #ffffff;
 }
 
 .section-subtitle {
   font-size: 15px;
-  color: #aaa;
-  margin-bottom: 40px;
+  color: #94a3b8;
+  margin-bottom: 35px;
   display: block;
 }
 
-/* Container untuk kiri & kanan */
+/* Container Kiri & Kanan */
 .contact-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  max-width: 1000px;
+  align-items: stretch;
+  gap: 30px;
+  max-width: 900px;
   margin: 0 auto;
-  flex-wrap: wrap;
 }
 
-/* Info box kiri */
+/* Info Box Kiri */
 .contact-info {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .info-box {
   display: flex;
   align-items: center;
-  gap: 15px;
-  background: #1e1b3a;
-  padding: 15px 20px;
+  gap: 18px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  text-align: left;
 }
 
 .info-box:hover {
   transform: translateY(-4px);
+  border-color: rgba(14, 165, 233, 0.4);
 }
 
 .info-box .icon {
-  font-size: 1.5rem;
-  color: #8b5cf6;
+  font-size: 1.4rem;
+  color: #0ea5e9; /* Cyan seragam */
+  flex-shrink: 0;
 }
 
 .info-box h4 {
-  font-size: 1rem;
-  margin-bottom: 4px;
+  font-size: 0.95rem;
+  margin-bottom: 3px;
   font-weight: 600;
+  color: #ffffff;
 }
 
 .info-box p {
-  font-size: 0.9rem;
-  color: #ccc;
+  font-size: 0.88rem;
+  color: #94a3b8;
+  margin: 0;
 }
 
-/* Form kanan */
+/* Form Kanan */
 .contact-form {
-  flex: 1;
-  background: #1e1b3a;
-  padding: 25px;
+  flex: 1.2;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .contact-form .form-row {
   display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
+  gap: 14px;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 12px 14px;
+  padding: 12px 16px;
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   outline: none;
-  background: #252048;
+  background: rgba(30, 41, 59, 0.7);
   color: #fff;
-  font-size: 0.95rem;
-  resize: none;
-  transition: border 0.3s, box-shadow 0.3s;
-  margin-bottom: 15px; /* 🔥 kasih jarak bawah */
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border: 1px solid #8b5cf6;
-}
-
-.contact-form textarea {
-  margin-bottom: 15px;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 8px rgba(14, 165, 233, 0.25);
 }
 
 .btn-send {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  background: #8b5cf6;
+  background: #0ea5e9;
   color: #fff;
   border: none;
-  padding: 12px 18px;
+  padding: 12px 20px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
-  transition: background 0.3s, transform 0.2s;
-  width: 100%;
+  font-size: 0.95rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 4px;
 }
 
 .btn-send:hover {
-  background: #7c3aed;
-  transform: scale(1.05);
+  background: #0284c7;
+  transform: translateY(-2px);
 }
 
-/* Responsif */
+/* Responsif HP */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
+  }
+  
+  .contact-form .form-row {
+    flex-direction: column;
+    gap: 14px;
   }
 }

@@ -1,37 +1,35 @@
 /* Projects Section */
 .projects {
-  /* Paksa padding atas ke nilai sangat kecil agar judul naik */
-  padding: 10px 20px 40px !important; 
-  background-color: #141229;
+  padding: 30px 20px 50px !important; 
+  background-color: transparent !important;
   color: #fff;
   text-align: center;
   overflow: hidden;
-  /* Sesuaikan jarak berhenti saat klik navbar */
-  scroll-margin-top: 70px !important; 
+  scroll-margin-top: 100px !important; 
   position: relative;
-  /* Hilangkan margin/height tambahan yang bikin melorot */
   margin: 0 !important;
   min-height: auto !important; 
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  /* Hilangkan margin atas bawaan tag h2 */
   margin-top: 0 !important; 
-  margin-bottom: 2px;
+  margin-bottom: 6px;
+  color: #ffffff;
 }
 
 .section-subtitle {
-  font-size: 14px;
-  color: #aaa;
+  font-size: 15px;
+  color: #94a3b8;
   margin-bottom: 25px;
   display: block;
 }
 
+/* Ukuran sedang pas untuk slider */
 .projects-slider {
   position: relative;
-  max-width: 700px;
+  max-width: 750px; /* Ukuran wadah dibuat sedang */
   margin: 0 auto;
   overflow: hidden;
 }
@@ -48,39 +46,43 @@
   box-sizing: border-box;
 }
 
-.project-media {
+/* Ukuran media gambar & video yang proporsional */
+.project-media, video.project-media {
   width: 100%;
-  max-width: 500px;
-  max-height: 280px;
-  object-fit: contain; /* Agar dashboard fawwaz7.jpeg terlihat utuh */
+  max-width: 620px;   /* Diatur sedang agar tidak memenuhi layar */
+  height: 330px;      /* Ketinggian dikunci 330px biar teks di bawahnya langsung kelihatan */
+  object-fit: contain; /* Utuh tanpa zoom berlebihan */
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  margin-bottom: 18px;
+  background-color: rgba(15, 23, 42, 0.7);
 }
 
 .project-slide h3 {
   font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  color: #0ea5e9;
 }
 
 .project-slide p {
-  font-size: 15px;
-  color: #ddd;
+  font-size: 14.5px;
+  color: #cbd5e1;
   line-height: 1.6;
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
 }
 
-/* Navigasi Buttons - Ungu Terang */
+/* Navigasi Buttons - Minimalis & Soft Frosted Glass */
 .nav-btn {
   position: absolute;
   top: 40%;
   transform: translateY(-50%);
-  background: rgba(155, 89, 182, 0.9);
-  border: none;
-  font-size: 1.8rem;
-  color: #fff;
+  background: rgba(15, 23, 42, 0.65) !important; /* Gelap transparan halus */
+  border: 1px solid rgba(255, 255, 255, 0.15) !important; /* Ring/frame tipis */
+  font-size: 1.6rem;
+  color: #e2e8f0; /* Warna panah putih keabu-abuan halus */
   cursor: pointer;
   border-radius: 50%;
   width: 40px;
@@ -89,16 +91,27 @@
   align-items: center;
   justify-content: center;
   z-index: 10;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px); /* Efek kaca halus */
+  box-shadow: none !important; /* Menghilangkan efek glow biru yang terlalu terang */
 }
 
-.left-btn { left: 10px; }
-.right-btn { right: 10px; }
+.nav-btn:hover {
+  background: #0ea5e9 !important; /* Berubah jadi Cyan saat kursor diarahkan */
+  color: #ffffff;
+  border-color: #0ea5e9 !important;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3) !important;
+}
+
+.left-btn { left: 8px; }
+.right-btn { right: 8px; }
 
 /* Dots Indicator */
 .projects-dots {
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 18px;
   gap: 8px;
 }
 
@@ -108,8 +121,11 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .dot.active {
-  background: #9b59b2;
+  background: #0ea5e9 !important;
+  width: 22px;
+  border-radius: 6px;
 }
