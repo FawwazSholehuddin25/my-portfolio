@@ -3,10 +3,46 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 90vh; /* Bikin area Hero lebih tinggi biar pas di tengah viewport */
-  padding: 80px 10% 40px 10%; /* Tambah padding-top jadi 80px biar konten terdorong turun */
+  min-height: 90vh;
+  padding: 80px 10% 40px 10%;
   position: relative;
   background-color: transparent;
+  overflow: hidden; /* Tambahan agar teks watermark tidak bikin scrollbar samping */
+
+  /* Hiasan 1: Pola Bintik Grid Tipis */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+
+  /* Hiasan 2: Cahaya Pendaran Bias Cyan Kiri Atas */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -5%;
+  width: 320px;
+  height: 320px;
+  background: rgba(14, 165, 233, 0.12);
+  filter: blur(120px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+}
+
+.hero-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.015); /* Opasitas diturunkan agar lebih samar */
+  letter-spacing: 12px;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(2px); /* Efek blur halus agar berbayang */
 }
 
 .hero-container {
@@ -16,7 +52,9 @@
   width: 100%;
   max-width: 950px;
   gap: 50px;
-  margin-top: 20px; /* Tambahan margin top untuk mendorong semua konten turun */
+  margin-top: 20px;
+  position: relative;
+  z-index: 1; /* Supaya teks & foto tetap di depan watermark */
 }
 
 /* Teks & Tampilan */

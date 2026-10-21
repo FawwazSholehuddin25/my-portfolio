@@ -7,6 +7,9 @@ import fawwazImg from "../assets/fawwazimg.jpeg";
 function Hero() {
   return (
     <section id="hero" className="hero">
+      {/* Teks Watermark Samar di Background */}
+      <div className="hero-bg-text">PORTOFOLIO</div>
+
       {/* Sidebar Social Media */}
       <div className="socials-sidebar">
         <a href="https://www.linkedin.com/in/fawwaz-sholehuddin25/" target="_blank" rel="noreferrer">
